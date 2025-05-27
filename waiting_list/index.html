@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waiting List Sign-up</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+    form { background: #fff; padding: 20px; max-width: 600px; margin: 0 auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    label { display: block; margin-bottom: 10px; }
+    .slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+    .slots label { display: flex; align-items: center; font-size: 0.9rem; }
+    .blocked { opacity: 0.5; text-decoration: line-through; }
+    button { padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Join the Waiting List</h1>
+  <form id="waitForm">
+    <label>Parent Name: <input type="text" name="parentName" required></label>
+    <label>Student Name: <input type="text" name="studentName" required></label>
+    <label>Level:
+      <select name="level" required>
+        <option value="A Level">A Level</option>
+        <option value="GCSE">GCSE</option>
+      </select>
+    </label>
+    <label>Subject:
+      <select name="subject" required>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics">Physics</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Further Mathematics">Further Mathematics</option>
+      </select>
+    </label>
+    <p>Select preferred 30&nbsp;min slots:</p>
+    <div class="slots" id="slots"></div>
+    <button type="submit">Submit</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
